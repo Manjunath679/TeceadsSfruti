@@ -1,0 +1,517 @@
+<!DOCTYPE html>
+<html lang="en"
+      dir="ltr">
+
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible"
+              content="IE=edge">
+        <meta name="viewport"
+              content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <title>Blank</title>
+
+        <!-- Prevent the demo from appearing in search engines -->
+        <meta name="robots"
+              content="noindex">
+
+        <!-- Perfect Scrollbar -->
+        <link type="text/css"
+              href="/assets/vendor/perfect-scrollbar.css"
+              rel="stylesheet">
+
+        <!-- App CSS -->
+        <link type="text/css"
+              href="/assets/css/app.css"
+              rel="stylesheet">
+        <link type="text/css"
+              href="/assets/css/app.rtl.css"
+              rel="stylesheet">
+
+        <!-- Material Design Icons -->
+        <link type="text/css"
+              href="/assets/css/vendor-material-icons.css"
+              rel="stylesheet">
+        <link type="text/css"
+              href="/assets/css/vendor-material-icons.rtl.css"
+              rel="stylesheet">
+
+        <!-- Font Awesome FREE Icons -->
+        <link type="text/css"
+              href="/assets/css/vendor-fontawesome-free.css"
+              rel="stylesheet">
+        <link type="text/css"
+              href="/assets/css/vendor-fontawesome-free.rtl.css"
+              rel="stylesheet">
+
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+        <script async
+                src="https://www.googletagmanager.com/gtag/js?id=UA-133433427-1"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+
+            function gtag() {
+                dataLayer.push(arguments);
+            }
+            gtag('js', new Date());
+            gtag('config', 'UA-133433427-1');
+        </script>
+
+    </head>
+
+    <body class="layout-default">
+
+        <div class="preloader"></div>
+
+        <!-- Header Layout -->
+        <div class="mdk-header-layout js-mdk-header-layout">
+
+            <!-- Header -->
+
+            <%- include('partials/header') %>
+
+            <!-- // END Header -->
+
+           
+           
+            <!-- Header Layout Content -->
+            <div class="mdk-header-layout__content">
+
+                <div class="mdk-drawer-layout js-mdk-drawer-layout"
+                     data-push
+                     data-responsive-width="992px">
+                    <div class="mdk-drawer-layout__content page">
+
+                        <div class="container-fluid page__heading-container">
+                            <div class="page__heading">
+                                
+
+                                <h1 class="m-0">Detailed Project Report(DPR)</h1>
+                            </div>
+                        </div>
+
+                        <div class="container-fluid page__container">
+
+                            <div class="card card-form">
+                                    <div class="card">
+                                        
+                                        <div class="card-header card-header-tabs-basic nav"
+                                             role="tablist">
+                                            <a href="/dpr/<%=data._id%>/1"
+                                          
+                                               
+                                               role="tab"
+                                               aria-controls="activity_all"
+                                               aria-selected="true">About Cluster</a>
+                                            <a href="/dpr/<%=data._id%>/2"
+                                               
+                                               role="tab"
+                                               aria-selected="false">Info_Imp.Agency</a>
+                                            <a href="/dpr/<%=data._id%>/3"
+                                     
+                                               
+                                               role="tab"
+                                               aria-selected="false">Info...SPV</a>
+                                            <a href="/dpr/<%=data._id%>/4"
+                                               
+                                               role="tab"
+                                               aria-selected="false">Info...Prod.Process</a>
+                                            <a href="/dpr/<%=data._id%>/5"
+                                               
+                                               role="tab"
+                                               aria-selected="false">Land Details</a>
+                                            <a href="/dpr/<%=data._id%>/6"
+                                               
+                                               role="tab"
+                                               aria-selected="false">Soft Intervention</a>
+                                               
+                                            <a href="/dpr/<%=data._id%>/7"
+                                               
+                                               role="tab"
+                                               aria-selected="false">Hard Intervention</a>
+                                            <a href="/dpr/<%=data._id%>/8"
+                                               
+                                               role="tab"
+                                               aria-selected="false">Project Cost Details</a>
+                                            <a href="/dpr/<%=data._id%>/9"
+                                               
+                                               role="tab"
+                                               aria-selected="false">Info...Proj.Timeline</a>
+                                            <a href="/dpr/<%=data._id%>/10"
+                                               
+                                               role="tab"
+                                               class="active"
+                                               aria-selected="false">ExpectedImpact</a>
+                                            <a href="/dpr/<%=data._id%>/11"
+                                               
+                                               role="tab"
+                                               aria-selected="false">TentativeBusiness Plan</a>
+                                            <a href="/dpr/<%=data._id%>/12"
+                                               
+                                               role="tab"
+                                               aria-selected="false">Info_Artisans</a>
+                                        </div>
+                                    </div>
+                                    <div class="card-body">
+                                        <p><strong class="headings-color">Please Fill Next Five Years Plan</strong></p>
+                                    </div>
+                                    <div class="row no-gutters">
+                                             <div class="card-form__body card-body">
+                                             <form action="/dpr/<%=data._id%>/10" method="POST">
+                                                  
+                                                  
+                                                   
+                                                   <div class="form-row">
+                                                     <div class="col  mb-3">
+                                                        <p><strong class="headings-color">Progress Report(Next 5 Yrs.)</strong></p>
+                                                      </div>
+                                                      <div class="col  mb-3">
+                                                        <p><strong class="headings-color">Year 1</strong></p>
+                                                        
+                                                      </div>
+                                                      <div class="col mb-3">
+                                                        <p><strong class="headings-color">Year 2</strong></p>
+                                                      </div>
+                                                      <div class="col  mb-3">
+                                                        <p><strong class="headings-color">Year 3</strong></p>
+                                                      </div>
+                                                      <div class="col  mb-3">
+                                                       <p><strong class="headings-color">Year 4</strong></p>
+                                                      </div>
+                                                      <div class="col  mb-3">
+                                                        <p><strong class="headings-color">Year 5</strong></p>
+                                                      </div>
+                                                      
+                                                   </div>
+                                                   <div class="form-row">
+                                                     <div class="col  mb-3">
+                                                        <p><strong class="headings-color">TurnOver)</strong></p>
+                                                      </div>
+                                                      <div class="col  mb-3">
+                                                       
+                                                        <input required value="" type="number" step="0.01" name="ty1"
+                                                               class="form-control"
+                                                               id="validationSample01"
+                                                               placeholder=""
+                                                            
+                                                               required="true">
+                                                      </div>
+                                                      <div class="col mb-3">
+                                                       
+                                                        <input required value="" type="number" step="0.01" name="ty2"
+                                                               class="form-control"
+                                                               id="validationSample01"
+                                                               placeholder=""
+                                                            
+                                                               required="true">
+                                                      </div>
+                                                      <div class="col  mb-3">
+                                                       
+                                                        <input required value="" type="number" step="0.01" name="ty3"
+                                                               class="form-control"
+                                                               id="validationSample01"
+                                                               placeholder=""
+                                                            
+                                                               required="true">
+                                                      </div>
+                                                      <div class="col  mb-3">
+                                                       
+                                                        <input required value="" type="number" step="0.01" name="ty4"
+                                                               class="form-control"
+                                                               id="validationSample01"
+                                                               placeholder=""
+                                                            
+                                                               required="true">
+                                                      </div>
+                                                      <div class="col  mb-3">
+                                                       
+                                                        <input required value="" type="number" step="0.01" name="ty5"
+                                                               class="form-control"
+                                                               id="validationSample01"
+                                                               placeholder=""
+                                                            
+                                                               required="true">
+                                                      </div>
+                                                      
+                                                   </div>
+                                                   <div class="form-row">
+                                                     <div class="col  mb-3">
+                                                        <p><strong class="headings-color">Wages</strong></p>
+                                                      </div>
+                                                      <div class="col  mb-3">
+                                                        
+                                                        <input required value="" type="number" step="0.01" name="wy1"
+                                                               class="form-control"
+                                                               id="validationSample01"
+                                                               placeholder=""
+                                                            
+                                                               required="true">
+                                                      </div>
+                                                      <div class="col mb-3">
+                                                       
+                                                        <input required value="" type="number" step="0.01" name="wy2"
+                                                               class="form-control"
+                                                               id="validationSample01"
+                                                               placeholder=""
+                                                            
+                                                               required="true">
+                                                      </div>
+                                                      <div class="col  mb-3">
+                                                       
+                                                        <input required value="" type="number" step="0.01" name="wy3"
+                                                               class="form-control"
+                                                               id="validationSample01"
+                                                               placeholder=""
+                                                            
+                                                               required="true">
+                                                      </div>
+                                                      <div class="col  mb-3">
+                                                     
+                                                        <input required value="" type="number" step="0.01" name="wy4"
+                                                               class="form-control"
+                                                               id="validationSample01"
+                                                               placeholder=""
+                                                            
+                                                               required="true">
+                                                      </div>
+                                                      <div class="col  mb-3">
+                                                      
+                                                        <input required value="" type="number" step="0.01" name="wy5"
+                                                               class="form-control"
+                                                               id="validationSample01"
+                                                               placeholder=""
+                                                            
+                                                               required="true">
+                                                      </div>
+                                                      
+                                                   </div>
+                                                   <div class="form-row">
+                                                     <div class="col  mb-3">
+                                                        <p><strong class="headings-color">Production</strong></p>
+                                                      </div>
+                                                      <div class="col  mb-3">
+                                                        
+                                                        <input required value="" type="number" step="0.01" name="py1"
+                                                               class="form-control"
+                                                               id="validationSample01"
+                                                               placeholder=""
+                                                            
+                                                               required="true">
+                                                      </div>
+                                                      <div class="col mb-3">
+                                                        
+                                                        <input required value="" type="number" step="0.01" name="py2"
+                                                               class="form-control"
+                                                               id="validationSample01"
+                                                               placeholder=""
+                                                            
+                                                               required="true">
+                                                      </div>
+                                                      <div class="col  mb-3">
+                                                       
+                                                        <input required value="" type="number" step="0.01" name="py3"
+                                                               class="form-control"
+                                                               id="validationSample01"
+                                                               placeholder=""
+                                                            
+                                                               required="true">
+                                                      </div>
+                                                      <div class="col  mb-3">
+                                                       
+                                                        <input required value="" type="number" step="0.01" name="py4"
+                                                               class="form-control"
+                                                               id="validationSample01"
+                                                               placeholder=""
+                                                            
+                                                               required="true">
+                                                      </div>
+                                                      <div class="col  mb-3">
+                                                       
+                                                        <input required value="" type="number" step="0.01" name="py5"
+                                                               class="form-control"
+                                                               id="validationSample01"
+                                                               placeholder=""
+                                                            
+                                                               required="true">
+                                                      </div>
+                                                      
+                                                   </div>
+                                                   <div class="form-row">
+                                                     <div class="col  mb-3">
+                                                        <p><strong class="headings-color">Sales</strong></p>
+                                                      </div>
+                                                      <div class="col  mb-3">
+                                                        
+                                                        <input required value="" type="number" step="0.01" name="sy1"
+                                                               class="form-control"
+                                                               id="validationSample01"
+                                                               placeholder=""
+                                                            
+                                                               required="true">
+                                                      </div>
+                                                      <div class="col mb-3">
+                                                        
+                                                        <input required value="" type="number" step="0.01" name="sy2"
+                                                               class="form-control"
+                                                               id="validationSample01"
+                                                               placeholder=""
+                                                            
+                                                               required="true">
+                                                      </div>
+                                                      <div class="col  mb-3">
+                                                        
+                                                        <input required value="" type="number" step="0.01" name="sy3"
+                                                               class="form-control"
+                                                               id="validationSample01"
+                                                               placeholder=""
+                                                            
+                                                               required="true">
+                                                      </div>
+                                                      <div class="col  mb-3">
+                                                       
+                                                        <input required value="" type="number" step="0.01" name="sy4"
+                                                               class="form-control"
+                                                               id="validationSample01"
+                                                               placeholder=""
+                                                            
+                                                               required="true">
+                                                      </div>
+                                                      <div class="col  mb-3">
+                                                       
+                                                        <input required value="" type="number" step="0.01" name="sy5"
+                                                               class="form-control"
+                                                               id="validationSample01"
+                                                               placeholder=""
+                                                            
+                                                               required="true">
+                                                      </div>
+                                                      
+                                                   </div>
+                                                   <div class="form-row">
+                                                     <div class="col  mb-3">
+                                                        <p><strong class="headings-color">Artisans No.</strong></p>
+                                                      </div>
+                                                      <div class="col  mb-3">
+                                                        
+                                                        <input required value="" type="number"  name="ay1"
+                                                               class="form-control"
+                                                               id="validationSample01"
+                                                               placeholder=""
+                                                            
+                                                               required="true">
+                                                      </div>
+                                                      <div class="col mb-3">
+                                                        
+                                                        <input required value="" type="number"  name="ay2"
+                                                               class="form-control"
+                                                               id="validationSample01"
+                                                               placeholder=""
+                                                            
+                                                               required="true">
+                                                      </div>
+                                                      <div class="col  mb-3">
+                                                       
+                                                        <input required value="" type="number"  name="ay3"
+                                                               class="form-control"
+                                                               id="validationSample01"
+                                                               placeholder=""
+                                                            
+                                                               required="true">
+                                                      </div>
+                                                      <div class="col  mb-3">
+                                                        
+                                                        <input required value="" type="number"  name="ay4"
+                                                               class="form-control"
+                                                               id="validationSample01"
+                                                               placeholder=""
+                                                            
+                                                               required="true">
+                                                      </div>
+                                                      <div class="col  mb-3">
+                                                       
+                                                        <input required value="" type="number"  name="ay5"
+                                                               class="form-control"
+                                                               id="validationSample01"
+                                                               placeholder=""
+                                                            
+                                                               required="true">
+                                                      </div>
+                                                      
+                                                   </div>
+                                                  
+                                                  
+                                                  
+                                                  
+                                                  <button type="submit"
+                                                    class="btn btn-primary">Add</button>
+                                                   
+                                              </form>
+                                            </div>
+                                          </div>
+                                   
+                                   
+                               
+                               
+                               
+                              
+                          </div>       
+                        
+                        </div>
+                    </div>
+
+
+                    
+
+
+
+                    <!-- // END drawer-layout__content -->
+
+                    <%- include('partials/sidebar') %>
+                </div>
+                <!-- // END drawer-layout -->
+
+            </div>
+            <!-- // END header-layout__content -->
+
+        </div>
+        <!-- // END header-layout -->
+
+        <!-- App Settings FAB -->
+        <div id="app-settings">
+            <app-settings layout-active="default"
+                          :layout-location="{
+      'default': 'blank.html',
+      'fixed': 'fixed-blank.html',
+      'fluid': 'fluid-blank.html',
+      'mini': 'mini-blank.html'
+    }"></app-settings>
+        </div>
+
+        <!-- jQuery -->
+        <script src="/assets/vendor/jquery.min.js"></script>
+
+        <!-- Bootstrap -->
+        <script src="/assets/vendor/popper.min.js"></script>
+        <script src="/assets/vendor/bootstrap.min.js"></script>
+
+        <!-- Perfect Scrollbar -->
+        <script src="/assets/vendor/perfect-scrollbar.min.js"></script>
+
+        <!-- DOM Factory -->
+        <script src="/assets/vendor/dom-factory.js"></script>
+
+        <!-- MDK -->
+        <script src="/assets/vendor/material-design-kit.js"></script>
+
+        <!-- App -->
+        <script src="/assets/js/toggle-check-all.js"></script>
+        <script src="/assets/js/check-selected-row.js"></script>
+        <script src="/assets/js/dropdown.js"></script>
+        <script src="/assets/js/sidebar-mini.js"></script>
+        <script src="/assets/js/app.js"></script>
+
+        <!-- App Settings (safe to remove) -->
+        <script src="/assets/js/app-settings.js"></script>
+
+    </body>
+
+</html>

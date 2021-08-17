@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en"
+      dir="ltr">
+
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible"
+              content="IE=edge">
+        <meta name="viewport"
+              content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <title>Tables</title>
+
+        <!-- Prevent the demo from appearing in search engines -->
+        <meta name="robots"
+              content="noindex">
+
+        <!-- Perfect Scrollbar -->
+        <link type="text/css"
+              href="/assets/vendor/perfect-scrollbar.css"
+              rel="stylesheet">
+
+        <!-- App CSS -->
+        <link type="text/css"
+              href="/assets/css/app.css"
+              rel="stylesheet">
+        <link type="text/css"
+              href="/assets/css/app.rtl.css"
+              rel="stylesheet">
+
+        <!-- Material Design Icons -->
+        <link type="text/css"
+              href="/assets/css/vendor-material-icons.css"
+              rel="stylesheet">
+        <link type="text/css"
+              href="/assets/css/vendor-material-icons.rtl.css"
+              rel="stylesheet">
+
+        <!-- Font Awesome FREE Icons -->
+        <link type="text/css"
+              href="/assets/css/vendor-fontawesome-free.css"
+              rel="stylesheet">
+        <link type="text/css"
+              href="/assets/css/vendor-fontawesome-free.rtl.css"
+              rel="stylesheet">
+
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+        <script async
+                src="https://www.googletagmanager.com/gtag/js?id=UA-133433427-1"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+
+            function gtag() {
+                dataLayer.push(arguments);
+            }
+            gtag('js', new Date());
+            gtag('config', 'UA-133433427-1');
+        </script>
+
+    </head>
+
+    <body class="layout-default">
+
+        <div class="preloader"></div>
+
+        <!-- Header Layout -->
+        <div class="mdk-header-layout js-mdk-header-layout">
+
+            <!-- Header -->
+
+            <%- include('partials/header')%>
+
+            <!-- // END Header -->
+
+            <!-- Header Layout Content -->
+            <div class="mdk-header-layout__content">
+
+                <div class="mdk-drawer-layout js-mdk-drawer-layout"
+                     data-push
+                     data-responsive-width="992px">
+                    <div class="mdk-drawer-layout__content page">
+
+                        <div class="container-fluid page__heading-container">
+                            <div class="page__heading">
+
+                                <h1 class="m-0">Concept Note</h1>
+                            </div>
+                        </div>
+
+                        <div class="container-fluid page__container">
+                            
+                            <div class="card-form__body card-body">
+                                <form action="/conceptnote" method="POST">
+                                <p><strong>Implementing Agencies (IAs) interested in taking up projects under SFURTI are requested to mail us  a concept note incorporating the following points:</strong></p>
+                                
+                                <p>1. Name and Address of the IA(NGO), year of its formation, Year wise net Income/ Expenditures for each of the last three years. The NGO must be registered under Darpan of Niti Aayog. Whether Memorandum of association / by-law of the entity(NGO,etc) permits undertaking proposed cluster activity.  </p>
+                                <div class="row">
+                                        <div class="col">
+                                                <label for="ClusterName">Name</label>
+                                                <input value="<%=user.conceptnote.nameia%>" type="text" class="form-control" id="ClusterName" name="nameofIA" required>
+                                        </div>
+                                        <div class="col">
+                                                <label for="ClusterAddress">Address</label>
+                                                <input value="<%=user.conceptnote.addressia%>" type="text" class="form-control" id="ClusterAddress" name="addressofIA" required>
+                                        </div>
+                                </div>
+                                <br>
+                                <div class="row">
+                                        <div class="col">
+                                                <label for="ClusterYear">Year of Formation</label>
+                                                <input value="<%=user.conceptnote.formationyear%>" type="text" class="form-control" id="ClusterYear" name="year" required>
+                                        </div>
+                                        <div class="col">
+                                                <label for="Income">Net Income Yearwise</label>
+                                                <input value="<%=user.conceptnote.netincome%>" type="text" class="form-control" id="Income" name="income" required>
+                                        </div>
+                                </div>
+                                <br>
+                                
+                                <p>2. Location of the proposed Common Facility Centre (CFC), whether land identified for the CFC, if yes, area and nature of land( Agricultural orotherwise). If Land not identified,  how much time IA would take to arrange land and its conversion. (Land would not be funded by Govt. grant, it has to be arranged by IA either by Lease or Ownership basis). 
+                                </p>
+                                <div class="row">
+                                    <div class="col">
+                                            <label for="location">Location of CFC</label>
+                                            <input value="<%=user.conceptnote.locationcfc%>"type="text" class="form-control" id="location" name="CFClocation" required>
+                                    </div>
+                                    <div class="col">
+                                            <label for="natureandarea">Nature</label>
+                                            <input value="<%=user.conceptnote.natureofland%>" type="text" class="form-control" id="nature" name="nature" >
+                                            <small>If land is identified for the CFC</small>
+                                    </div>
+                            </div>
+                            <br>
+                            <div class="row">
+                                    <div class="col">
+                                            <label for="natureandarea">Area</label>
+                                            <input value="<%=user.conceptnote.areaofland%>" type="text" class="form-control" id="area" name="area" >
+                                            <small>If land is identified for the CFC</small>
+                                    </div>
+                                    <div class="col">
+                                            <label for="time">Time IA to arrange land and its conversion</label>
+                                            <input value="<%=user.conceptnote.timeia%>" type="text" class="form-control" id="time" name="time" >
+                                            <small>If land is not identified for the CFC</small>
+                                    </div>
+                            </div>
+                            <br>
+                                <p>3. Name of Villages(Block wise) to be covered under the cluster and their distance from the CFC. Approximate Population of those villages and whether dominated by SCs/ STs. Approximate number of farmers/ artisans in the villages depending upon whether the cluster is farm based or artisan based cluster.       
+                                </p>
+                                <div class="row">
+                                    <div class="col">
+                                            <label for="VillageName">Name of Villages:</label>
+                                            <input value="<%=user.conceptnote.VillageName%>"type="text" class="form-control" id="VillageName" name="VillageName" required>
+                                    </div>
+                                    <div class="col">
+                                            <label for="Distance">Distance from the CFC</label>
+                                            <input value="<%=user.conceptnote.Distancefromcfc%>" type="text" class="form-control" id="Distance" name="Distance" required>
+                                    </div>
+                            </div>
+                            <br>
+                            <div class="row">
+                                    <div class="col">
+                                            <label for="Population">Approximate Population of those Villages</label>
+                                            <input value="<%=user.conceptnote.population%>" type="text" class="form-control" id="Population" name="population" required>
+                                    </div>
+                                    <div class="col">
+                                            <label for="Artisans">Total No. Of Artisans</label>
+                                            <input value="<%=user.conceptnote.noOfArtisans%>" type="text" class="form-control" id="Artisans" name="Artisans" required>
+                                    </div>
+                            </div>
+                            <br>
+                                <p>4. No of Beneficiaries (artisans/farmers) of the project and how they will be benefited by the project.</p>
+                                <div class="row">
+                                    <div class="col">
+                                            <label for="Beneficiaries">No. of Beneficiaries</label>
+                                            <input value="<%=user.conceptnote.noOfBeneficiaries%>" type="text" class="form-control" id="Beneficiaries" name="Beneficiaries" required>
+                                    </div>
+                                    <div class="col">
+                                            <label for="benefited">How they are benifited</label>
+                                            <input value="<%=user.conceptnote.howtheybenefited%>" type="text" class="form-control" id="benefited" name="benefited" required>
+                                    </div>
+                            </div>
+                            <br>
+                                <p>5. How long it would take to prepare the complete list of Beneficiaries with relevant details. Also how long it would take to form a Special purpose Vehicle(SPV) of Beneficiaries such as Trust, Cooperative Society, FPO etc.
+                                </p>
+                                <div class="row">
+                                        <div class="col">
+                                                <label for="TimeTaken">Time to prepare the list of Beneficiaries</label>
+                                                <input value="<%=user.conceptnote.timelistbeneficiaries%>" type="text" class="form-control" id="TimeTaken" name="TimeTaken" required>
+                                        </div>
+                                        <div class="col">
+                                                <label for="Timetoform">Time to form SPV</label>
+                                                <input value="<%=user.conceptnote.timeformSPV%>" type="text" class="form-control" id="Timetoform" name="Timetoform" required>
+                                        </div>
+                                </div>
+                                <br>
+                                <p>6.Name of the products to be processed in the CFC, brief description of  processes for each product- from raw material to finished product.</p>
+                                <div class="row">
+                                    <div class="col">
+                                            <label for="ProductName">Name of the Products</label>
+                                            <input value="<%=user.conceptnote.nameofproduct%>" type="text" class="form-control" id="ProductName" name="ProductName" required>
+                                    </div>
+                                    <div class="col">
+                                            <label for="BriefDescription">Brief Description of the processes</label>
+                                            <input value="<%=user.conceptnote.descriptionofprocess%>" type="text" class="form-control" id="BriefDescription" name="BriefDescription" required>
+                                    </div>
+                            </div>
+                            <br>
+                                <p>7. CFC size ( in sq.ft) and approximate cost of construction.</p>
+                                <div class="row">
+                                    <div class="col">
+                                            <label for="CFCsize">CFC size ( in sq.ft)</label>
+                                            <input value="<%=user.conceptnote.cfcSize%>" type="text" class="form-control" id="CFCsize" name="CFCsize" required>
+                                    </div>
+                                    <div class="col">
+                                            <label for="constructioncost">Approximate cost of construction</label>
+                                            <input value="<%=user.conceptnote.constructionCost%>" type="text" class="form-control" id="constructioncost" name="constructioncost" required>
+                                    </div>
+                            </div>
+                            <br>
+                                <p>8. Details of Raw materials required for the project and their current availability.  For Agril. based projects, current area under the crop and production in the villages covered under the cluster.</p>
+                                <div class="row">
+                                    <div class="col">
+                                            <label for="Details">Details of Raw materials required</label>
+                                            <input value="<%=user.conceptnote.RawMaterial%>" type="text" class="form-control" id="Details" name="Details" required>
+                                    </div>
+                                    <div class="col">
+                                            <label for="currentavailability">Current availability</label>
+                                            <input value="<%=user.conceptnote.RMAvailability%>" type="text" class="form-control" id="currentavailability" name="currentavailability" required>
+                                    </div>
+                            </div>
+                            <br>
+                            <div class="row">
+                                <div class="col">
+                                        <label for="Currentarea">Current Area under the crop</label>
+                                        <input value="<%=user.conceptnote.Areaundercrop%>" type="text" class="form-control" id="Currentarea" name="Currentarea" required>
+                                </div>
+                                <div class="col">
+                                        <label for="VillagesProduction">Production in the villages</label>
+                                        <input value="<%=user.conceptnote.ProductionInVillages%>" type="text" class="form-control" id="VillagesProduction" name="VillagesProduction" required>
+                                </div>
+                        </div>
+                        <br>
+                                <p>9.what type of machines required to be installed and Approximate cost of such machines .</p>
+                                <div class="row">
+                                    <div class="col">
+                                            <label for="MachineType">Type Of the Machines</label>
+                                            <input value="<%=user.conceptnote.MachineType%>" type="text" class="form-control" id="MachineType" name="MachineType" required>
+                                    </div>
+                                    <div class="col">
+                                            <label for="MachinesCost">Cost Of Machines</label>
+                                            <input value="<%=user.conceptnote.MachineCost%>" type="text" class="form-control" id="MachinesCost" name="MachinesCost" required>
+                                    </div>
+                            </div>
+                            <br>
+                                <p>10. Total cost of CFC construction  and  Machines. Whether IA would be in a position to organize 10% of this cost as it's own contribution.</p>
+                                <div class="row">
+                                    <div class="col">
+                                            <label for="ConstructionCost"> Total cost of CFC construction and Machines</label>
+                                            <input value="<%=user.conceptnote.TotalCost%>" type="text" class="form-control" id="ConstructionCost" name="ConstructionCost" required>
+                                    </div>
+                                   
+                            </div>
+                            <br>
+                                <p>11. Plan to market the products</p>
+                                <div class="row">
+                                    <div class="col">
+                                            <label for="Plan">Plan to market the products</label>
+                                            <input value="<%=user.conceptnote.MarketProduct%>" type="text" class="form-control" id="Plan" name="Plan" required>
+                                    </div>
+                                    
+                            </div>
+                            <br>
+                                <p>The concept note can be emailed in word format in the following email-ids:     niranjana@kiitincubator.in   and tuna@kiitincubator.in</p>
+                                
+                                <p><strong>Please note that preference is given to clusters under districts identified as Atma nirvar Districts and Aspirational Districts, and in areas having majority of SC/ ST population. Four identified Atmanirvar districts of Odisha are Balangir, Ganjam, Bhadrak and Balasore. Ten aspirational districts of Odisha are Balangir, Dhenkanal, Gajapati, Kalahandi, Kandhamal, Koraput,Malkangiri, Nabarangapur, Nuapada and Rayagada.</strong></p>
+                                 <button class="btn btn-primary" type="submit">Save</button>
+                                <button class="btn btn-primary" type="reset">Reset</button>
+                                </form>
+                           </div>
+                        </div>
+
+                    </div>
+                    <!-- // END drawer-layout__content -->
+
+                    <%- include('partials/sidebar') %>
+                </div>
+                <!-- // END drawer-layout -->
+
+            </div>
+            <!-- // END header-layout__content -->
+
+        </div>
+        <!-- // END header-layout -->
+
+        <!-- App Settings FAB -->
+        <div id="app-settings">
+            <app-settings layout-active="default"
+                          :layout-location="{
+      'default': 'ui-tables.html',
+      'fixed': 'fixed-ui-tables.html',
+      'fluid': 'fluid-ui-tables.html',
+      'mini': 'mini-ui-tables.html'
+    }"></app-settings>
+        </div>
+
+        <!-- jQuery -->
+        <script src="assets/vendor/jquery.min.js"></script>
+
+        <!-- Bootstrap -->
+        <script src="assets/vendor/popper.min.js"></script>
+        <script src="assets/vendor/bootstrap.min.js"></script>
+
+        <!-- Perfect Scrollbar -->
+        <script src="assets/vendor/perfect-scrollbar.min.js"></script>
+
+        <!-- DOM Factory -->
+        <script src="assets/vendor/dom-factory.js"></script>
+
+        <!-- MDK -->
+        <script src="assets/vendor/material-design-kit.js"></script>
+
+        <!-- App -->
+        <script src="assets/js/toggle-check-all.js"></script>
+        <script src="assets/js/check-selected-row.js"></script>
+        <script src="assets/js/dropdown.js"></script>
+        <script src="assets/js/sidebar-mini.js"></script>
+        <script src="assets/js/app.js"></script>
+
+        <!-- App Settings (safe to remove) -->
+        <script src="assets/js/app-settings.js"></script>
+
+        <!-- List.js -->
+        <script src="assets/vendor/list.min.js"></script>
+        <script src="assets/js/list.js"></script>
+
+    </body>
+
+</html>

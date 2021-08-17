@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en"
+      dir="ltr">
+
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible"
+              content="IE=edge">
+        <meta name="viewport"
+              content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <title>Blank</title>
+
+        <!-- Prevent the demo from appearing in search engines -->
+        <meta name="robots"
+              content="noindex">
+
+        <!-- Perfect Scrollbar -->
+        <link type="text/css"
+              href="/assets/vendor/perfect-scrollbar.css"
+              rel="stylesheet">
+
+        <!-- App CSS -->
+        <link type="text/css"
+              href="/assets/css/app.css"
+              rel="stylesheet">
+        <link type="text/css"
+              href="/assets/css/app.rtl.css"
+              rel="stylesheet">
+
+        <!-- Material Design Icons -->
+        <link type="text/css"
+              href="/assets/css/vendor-material-icons.css"
+              rel="stylesheet">
+        <link type="text/css"
+              href="/assets/css/vendor-material-icons.rtl.css"
+              rel="stylesheet">
+
+        <!-- Font Awesome FREE Icons -->
+        <link type="text/css"
+              href="/assets/css/vendor-fontawesome-free.css"
+              rel="stylesheet">
+        <link type="text/css"
+              href="/assets/css/vendor-fontawesome-free.rtl.css"
+              rel="stylesheet">
+
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+        <script async
+                src="https://www.googletagmanager.com/gtag/js?id=UA-133433427-1"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+
+            function gtag() {
+                dataLayer.push(arguments);
+            }
+            gtag('js', new Date());
+            gtag('config', 'UA-133433427-1');
+        </script>
+        <script> 
+          
+        function checkEmail(form) { 
+        email = form.Email.value; 
+        email2 = form.Alternateemail.value; 
+          
+        if ( email  === email2) { 
+            alert ("\nEnter different email!") 
+            return false; 
+        } 
+        else{ 
+            return true; 
+            } 
+        } 
+        </script> 
+       
+
+    </head>
+
+    <body class="layout-default">
+
+        <div class="preloader"></div>
+
+        <!-- Header Layout -->
+        <div class="mdk-header-layout js-mdk-header-layout">
+
+            <!-- Header -->
+
+            <%- include('partials/header') %>
+
+            <!-- // END Header -->
+
+           
+           
+            <!-- Header Layout Content -->
+            <div class="mdk-header-layout__content">
+
+                <div class="mdk-drawer-layout js-mdk-drawer-layout"
+                     data-push
+                     data-responsive-width="992px">
+                    <div class="mdk-drawer-layout__content page">
+
+                        <div class="container-fluid page__heading-container">
+                            <div class="page__heading d-flex align-items-center">
+                                <div class="flex">
+                                   <h1 class="m-0">Concept Note</h1>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="container-fluid page__container">
+                               <div class="card card-form">
+                                        <div class="row no-gutters">
+                                            <div class="card-form__body card-body">
+                                                <form action="/conceptnoteinfo/<%= users.id%>" method="POST">
+                                                    <div>
+                                                        <p>1. Name and Address of the IA(NGO), year of its formation, Year wise net Income/ Expenditures for each of the last three years. The NGO must be registered under Darpan of Niti Aayog. Whether Memorandum of association / by-law of the entity(NGO,etc) permits undertaking proposed cluster activity.  </p>
+                                                   <strong>Name : <%= users.conceptnote.nameia%></strong><br>
+                                                   <strong>Address : <%= users.conceptnote.addressia%></strong><br>
+                                                   <strong>Year Of Formation : <%= users.conceptnote.formationyear%></strong><br>
+                                                   <strong>Net Income Yearwise : <%= users.conceptnote.netincome%></strong><br><br>
+                                                   <p>2. Location of the proposed Common Facility Centre (CFC), whether land identified for the CFC, if yes, area and nature of land( Agricultural orotherwise). If Land not identified,  how much time IA would take to arrange land and its conversion. (Land would not be funded by Govt. grant, it has to be arranged by IA either by Lease or Ownership basis). 
+                                                </p>
+                                                   <strong>Location Of CFC : <%= users.conceptnote.locationcfc%></strong><br>
+                                                   <strong>Nature Of Land : <%= users.conceptnote.natureofland%></strong><br>
+                                                   <strong>Area Of Land : <%= users.conceptnote.areaofland%></strong><br>
+                                                   <strong>Time IA to arrange land and its conversion : <%= users.conceptnote.timeia%></strong><br><br>
+                                                   <p>3. Name of Villages(Block wise) to be covered under the cluster and their distance from the CFC. Approximate Population of those villages and whether dominated by SCs/ STs. Approximate number of farmers/ artisans in the villages depending upon whether the cluster is farm based or artisan based cluster.       
+                                                </p>
+                                                   <strong>Name Of Villages : <%= users.conceptnote.VillageName%></strong><br>
+                                                   <strong>Distance From the CFC : <%= users.conceptnote.Distancefromcfc%></strong><br>
+                                                   <strong>Approximate Population Of the Villages : <%= users.conceptnote.population%></strong><br>
+                                                   <strong>Total No. Of Artisans : <%= users.conceptnote.noOfArtisans%></strong><br><br>
+                                                   <p>4. No of Beneficiaries (artisans/farmers) of the project and how they will be benefited by the project.</p>
+                                                   <strong>No. Of Beneficiaries : <%= users.conceptnote.noOfBeneficiaries%></strong><br>
+                                                   <strong>How They Are benefited: <%= users.conceptnote.howtheybenefited%></strong><br><br>
+                                                   <p>5. How long it would take to prepare the complete list of Beneficiaries with relevant details. Also how long it would take to form a Special purpose Vehicle(SPV) of Beneficiaries such as Trust, Cooperative Society, FPO etc.
+                                                </p>
+                                                   <strong>Time to Prepare the list of Beneficiaries : <%= users.conceptnote.timelistbeneficiaries%></strong><br>
+                                                   <strong>Time to form SPV : <%= users.conceptnote.timeformSPV%></strong><br><br>
+                                                   <p>6.Name of the products to be processed in the CFC, brief description of  processes for each product- from raw material to finished product.</p>
+                                                   <strong>Name Of the Products : <%= users.conceptnote.nameofproduct%></strong><br>
+                                                   <strong>Brief description of processes: <%= users.conceptnote.descriptionofprocess%></strong><br><br>
+                                                   <p>7. CFC size ( in sq.ft) and approximate cost of construction.</p>
+                                                   <strong>CFC size ( in sq.ft) : <%= users.conceptnote.cfcSize%></strong><br>
+                                                   <strong>Approximate cost of construction : <%= users.conceptnote.constructionCost%></strong><br><br>
+                                                   <p>8. Details of Raw materials required for the project and their current availability.  For Agril. based projects, current area under the crop and production in the villages covered under the cluster.</p>
+                                                   <strong> Details of Raw materials required  : <%= users.conceptnote.RawMaterial%></strong><br>
+                                                   <strong>Current availability : <%= users.conceptnote.RMAvailability%></strong><br>
+                                                   <strong>Address : <%= users.conceptnote.addressia%></strong><br>
+                                                   <strong>Current area under the crop : <%= users.conceptnote.Areaundercrop%></strong><br>
+                                                   <strong>Production in the Villages : <%= users.conceptnote.ProductionInVillages%></strong><br><br>
+                                                   <p>9.what type of machines required to be installed and Approximate cost of such machines .</p>
+                                                   <strong>Type of machines : <%= users.conceptnote.MachineType%></strong><br>
+                                                   <strong> Approximate cost of such machines : <%= users.conceptnote.MachineCost%></strong><br><br>
+                                                   <p>10. Total cost of CFC construction  and  Machines. Whether IA would be in a position to organize 10% of this cost as it's own contribution.</p>
+                                                   <strong>Total cost of CFC construction  and  Machines : <%= users.conceptnote.TotalCost%></strong><br><br>
+                                                   <p>11. Plan to market the products</p>
+                                                   <strong>Plan to market the products : <%= users.conceptnote.MarketProduct%></strong><br><br>
+                                                </div>
+                                                <button class="btn btn-primary" type="submit">Approve</button>
+                                                
+                                                </form>
+                                            
+                                            </div>
+                                        </div>
+                                </div>
+                          </div>       
+                        
+                    </div>
+
+
+
+
+
+
+                    <!-- // END drawer-layout__content -->
+
+                    <%- include('partials/sidebar') %>
+                </div>
+                <!-- // END drawer-layout -->
+
+            </div>
+            <!-- // END header-layout__content -->
+
+        </div>
+        <!-- // END header-layout -->
+
+        <!-- App Settings FAB -->
+        <div id="app-settings">
+            <app-settings layout-active="default"
+                          :layout-location="{
+      'default': 'blank.html',
+      'fixed': 'fixed-blank.html',
+      'fluid': 'fluid-blank.html',
+      'mini': 'mini-blank.html'
+    }"></app-settings>
+        </div>
+
+        <!-- jQuery -->
+        <script src="/assets/vendor/jquery.min.js"></script>
+
+        <!-- Bootstrap -->
+        <script src="/assets/vendor/popper.min.js"></script>
+        <script src="/assets/vendor/bootstrap.min.js"></script>
+
+        <!-- Perfect Scrollbar -->
+        <script src="/assets/vendor/perfect-scrollbar.min.js"></script>
+
+        <!-- DOM Factory -->
+        <script src="/assets/vendor/dom-factory.js"></script>
+
+        <!-- MDK -->
+        <script src="/assets/vendor/material-design-kit.js"></script>
+
+        <!-- App -->
+        <script src="/assets/js/toggle-check-all.js"></script>
+        <script src="/assets/js/check-selected-row.js"></script>
+        <script src="/assets/js/dropdown.js"></script>
+        <script src="/assets/js/sidebar-mini.js"></script>
+        <script src="/assets/js/app.js"></script>
+
+        <!-- App Settings (safe to remove) -->
+        <script src="/assets/js/app-settings.js"></script>
+
+    </body>
+
+</html>

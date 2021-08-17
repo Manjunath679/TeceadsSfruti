@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en"
+      dir="ltr">
+
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible"
+              content="IE=edge">
+        <meta name="viewport"
+              content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <title>Blank</title>
+
+        <!-- Prevent the demo from appearing in search engines -->
+        <meta name="robots"
+              content="noindex">
+
+        <!-- Perfect Scrollbar -->
+        <link type="text/css"
+              href="/assets/vendor/perfect-scrollbar.css"
+              rel="stylesheet">
+
+        <!-- App CSS -->
+        <link type="text/css"
+              href="/assets/css/app.css"
+              rel="stylesheet">
+        <link type="text/css"
+              href="/assets/css/app.rtl.css"
+              rel="stylesheet">
+
+        <!-- Material Design Icons -->
+        <link type="text/css"
+              href="/assets/css/vendor-material-icons.css"
+              rel="stylesheet">
+        <link type="text/css"
+              href="/assets/css/vendor-material-icons.rtl.css"
+              rel="stylesheet">
+
+        <!-- Font Awesome FREE Icons -->
+        <link type="text/css"
+              href="/assets/css/vendor-fontawesome-free.css"
+              rel="stylesheet">
+        <link type="text/css"
+              href="/assets/css/vendor-fontawesome-free.rtl.css"
+              rel="stylesheet">
+
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+        <script async
+                src="https://www.googletagmanager.com/gtag/js?id=UA-133433427-1"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+
+            function gtag() {
+                dataLayer.push(arguments);
+            }
+            gtag('js', new Date());
+            gtag('config', 'UA-133433427-1');
+        </script>
+
+    </head>
+
+    <body class="layout-default">
+
+        <div class="preloader"></div>
+
+        <!-- Header Layout -->
+        <div class="mdk-header-layout js-mdk-header-layout">
+
+            <!-- Header -->
+
+            <%- include('partials/header') %>
+
+            <!-- // END Header -->
+
+           
+           
+            <!-- Header Layout Content -->
+            <div class="mdk-header-layout__content">
+
+                <div class="mdk-drawer-layout js-mdk-drawer-layout"
+                     data-push
+                     data-responsive-width="992px">
+                    <div class="mdk-drawer-layout__content page">
+
+                        <div class="container-fluid page__heading-container">
+                            <div class="page__heading d-flex align-items-center">
+                                <div class="flex">
+                                   <h1 class="m-0">Detailed Project Report(DPR)</h1>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="container-fluid page__container">
+                               <div class="card card-form">
+                                   <div class="card">
+                                        
+                                        <div class="card-header card-header-tabs-basic nav"
+                                             role="tablist">
+                                            <a href="/dpr/<%=data._id%>/1"
+                                               
+                                               
+                                               role="tab"
+                                               aria-controls="activity_all"
+                                               aria-selected="true">About Cluster</a>
+                                            <a href="/dpr/<%=data._id%>/2"
+                                               
+                                               role="tab"
+                                               aria-selected="false">Info_Imp.Agency</a>
+                                            <a href="/dpr/<%=data._id%>/3"
+                                              
+                                               
+                                               role="tab"
+                                               aria-selected="false">Info...SPV</a>
+                                            <a href="/dpr/<%=data._id%>/4"
+                                               
+                                               role="tab"
+                                               aria-selected="false">Info...Prod.Process</a>
+                                            <a href="/dpr/<%=data._id%>/5"
+                                               
+                                               
+                                               role="tab"
+                                               aria-selected="false">Land Details</a>
+                                            <a href="/dpr/<%=data._id%>/6"
+                                               
+                                               role="tab"
+                                               aria-selected="false">Soft Intervention</a>
+                                            
+                                            <a href="/dpr/<%=data._id%>/7"
+                                               
+                                               role="tab"
+                                               aria-selected="false">Hard Intervention</a>
+                                            <a href="/dpr/<%=data._id%>/8"
+                                               
+                                               role="tab"
+                                             
+                                               aria-selected="false">Project Cost Details</a>
+                                            <a href="/dpr/<%=data._id%>/9"
+                                               
+                                               role="tab"
+                                               aria-selected="false">Info...Proj.Timeline</a>
+                                            <a href="/dpr/<%=data._id%>/10"
+                                               
+                                               role="tab"
+                                               aria-selected="false">ExpectedImpact</a>
+                                            <a href="/dpr/<%=data._id%>/11"
+                                               
+                                               role="tab"
+                                               aria-selected="false">TentativeBusiness Plan</a>
+                                            <a href="/dpr/<%=data._id%>/12"
+                                               
+                                               role="tab"
+                                               class="active"
+                                               aria-selected="false">Info_Artisans</a>
+                                        </div>
+                                    </div>
+                                  <div class="card-body">
+                                        <p><strong class="headings-color">Artisan Details</strong></p>
+                                  </div>
+                                  <div class="container-fluid page__container">
+                                      <div class="card card-form">
+                                         
+                                          <div class="row no-gutters">
+                                             <div class="card-form__body card-body">
+                                                <form  action="/dpr/<%=data._id%>/12?form=1" method="POST">
+                                                    
+                                                    
+                                                   <br>
+                                                   <div class="row">
+                                                       <div class="col">
+                                                         <label for="outline5">Artisan Name</label>
+                                                         <input required value="" type="text" class="form-control" id="outline5" name="artname" placeholder="Artisan Name" required>
+                                                       </div>
+                                                       <div class="col">
+                                                           <div class="col">
+                                                               <label for="days5">Artisan Father/Husband's Name</label>
+                                                               <input required value="" type="text" class="form-control" id="days5" name="faname" placeholder="Artisan Father/Husband Name" required>
+                                                             </div>       
+                                                       </div>
+                                                  </div>
+                                                  <br>
+                                                   <div class="row">
+                                                       <div class="col">
+                                                         <label for="select01">Gender</label>
+                                                         <select id="select01"
+                                                             data-toggle="select"
+                                                              class="form-control"
+                                                              name="Gender" required>
+                                                         <option selected="">Male</option>
+                                                         <option>Female</option>
+                                                         <option>Other</option>
+                                                         </select>
+                                                       </div>
+                                                       <div class="col">
+                                                           <div class="col">
+                                                               <label for="amount5">Age</label>
+                                                               <input required value="" type="number" class="form-control" id="amount5" name="age" placeholder="Enter Age" required>
+                                                             </div>       
+                                                       </div>
+                                                  </div>
+                                                  <br>
+                                                   <div class="row">
+                                                       <div class="col">
+                                                         <label for="select01">Category</label>
+                                                         <select id="select01"
+                                                             data-toggle="select"
+                                                              class="form-control"
+                                                              name="Category" required>
+                                                         <option >One</option>
+                                                         <option>Two </option>
+                                                         <option>Three</option>
+                                                         </select>
+                                                       </div>
+                                                       <div class="col">
+                                                           <div class="col">
+                                                               <label for="method5">Aadhar No./Epic No.</label>
+                                                               <input required value="" type="number" class="form-control" id="method5" name="adorepic" placeholder="Enter Aadhar or Epic No." required>
+                                                             </div>       
+                                                       </div>
+                                                  </div>
+                                                  <br>
+                                                   <div class="row">
+                                                       <div class="col">
+                                                         <label for="infastructure5">Mobile No.</label>
+                                                         <input required value="" type="text" class="form-control" id="infastructure5" name="mbno" required pattern="[0-9]{10}" placeholder="Enter Mobile No.">
+                                                       </div>
+                                                       <div class="col">
+                                                           <div class="col">
+                                                               <label for="available5">Bank Account No.</label>
+                                                               <input required value="" type="number" class="form-control" id="available5" name="bnkacno" placeholder="Enter Bank Account No." required>
+                                                             </div>       
+                                                       </div>
+                                                  </div>
+                                                  
+                                                 
+                                                   
+                                        
+                                                   
+                                                   
+                                                   <br>
+                                                   <button class="btn btn-primary" type="submit">Add Artisans</button>
+                                                   <button class="btn btn-primary" type="reset">Reset</button>
+                                                   
+                                                   </form>
+                                                   
+                                                  
+                                            </div>
+                                          </div>
+                                       </div>
+                                   </div>
+                                 
+                       
+                               </div>
+                          </div>
+                          <div class="container-fluid page__container">
+                               <div class="card card-form">
+                                  <br>
+                                  <div class="container-fluid page__container">
+                                      <div class="card card-form">
+                                         
+                                          <div class="row no-gutters">
+                                             <div class="card-form__body card-body">
+                                                <form action="/dpr/<%=data._id%>/12?form=2" method="POST">
+                                                  <br>
+                                                   <div class="row">
+                                                       <div class="col">
+                                                          <div class="custom-control custom-checkbox">
+                                                           <input required value="" class="custom-control-input"
+                                                           type="checkbox"
+                                                           value="true"
+                                                           id="invalidCheck01"
+                                                           name="finalcheck"
+                                                           checked="" required>
+                                                           <label class="custom-control-label"
+                                                                   for="invalidCheck01" >
+                                                                  It is certified that we have not availed/shall not avail any financial assistance in any form the Central/State Government organization for similar activities/project/component 
+                                                                  </label>
+                                                           </div>
+                                                       </div>
+                                                       
+                                                  </div>
+                                                </br>
+                                                  <button class="btn btn-primary" type="submit">Final Save</button>
+                                                   
+                                                  </form>
+                                                   
+                                                  
+                                            </div>
+                                          </div>
+                                       </div>
+                                   </div>
+                                 
+                       
+                               </div>
+                          </div>         
+                        
+                    </div>
+
+
+
+
+
+
+                    <!-- // END drawer-layout__content -->
+
+                    <%- include('partials/sidebar') %>
+                </div>
+                <!-- // END drawer-layout -->
+
+            </div>
+            <!-- // END header-layout__content -->
+
+        </div>
+        <!-- // END header-layout -->
+
+        <!-- App Settings FAB -->
+        <div id="app-settings">
+            <app-settings layout-active="default"
+                          :layout-location="{
+      'default': 'blank.html',
+      'fixed': 'fixed-blank.html',
+      'fluid': 'fluid-blank.html',
+      'mini': 'mini-blank.html'
+    }"></app-settings>
+        </div>
+
+        <!-- jQuery -->
+        <script src="/assets/vendor/jquery.min.js"></script>
+
+        <!-- Bootstrap -->
+        <script src="/assets/vendor/popper.min.js"></script>
+        <script src="/assets/vendor/bootstrap.min.js"></script>
+
+        <!-- Perfect Scrollbar -->
+        <script src="/assets/vendor/perfect-scrollbar.min.js"></script>
+
+        <!-- DOM Factory -->
+        <script src="/assets/vendor/dom-factory.js"></script>
+
+        <!-- MDK -->
+        <script src="/assets/vendor/material-design-kit.js"></script>
+
+        <!-- App -->
+        <script src="/assets/js/toggle-check-all.js"></script>
+        <script src="/assets/js/check-selected-row.js"></script>
+        <script src="/assets/js/dropdown.js"></script>
+        <script src="/assets/js/sidebar-mini.js"></script>
+        <script src="/assets/js/app.js"></script>
+
+        <!-- App Settings (safe to remove) -->
+        <script src="/assets/js/app-settings.js"></script>
+
+    </body>
+
+</html>

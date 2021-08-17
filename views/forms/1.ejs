@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="en"
+      dir="ltr">
+
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible"
+              content="IE=edge">
+        <meta name="viewport"
+              content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <title>Blank</title>
+
+        <!-- Prevent the demo from appearing in search engines -->
+        <meta name="robots"
+              content="noindex">
+
+        <!-- Perfect Scrollbar -->
+        <link type="text/css"
+              href="/assets/vendor/perfect-scrollbar.css"
+              rel="stylesheet">
+
+        <!-- App CSS -->
+        <link type="text/css"
+              href="/assets/css/app.css"
+              rel="stylesheet">
+        <link type="text/css"
+              href="/assets/css/app.rtl.css"
+              rel="stylesheet">
+
+        <!-- Material Design Icons -->
+        <link type="text/css"
+              href="/assets/css/vendor-material-icons.css"
+              rel="stylesheet">
+        <link type="text/css"
+              href="/assets/css/vendor-material-icons.rtl.css"
+              rel="stylesheet">
+
+        <!-- Font Awesome FREE Icons -->
+        <link type="text/css"
+              href="/assets/css/vendor-fontawesome-free.css"
+              rel="stylesheet">
+        <link type="text/css"
+              href="/assets/css/vendor-fontawesome-free.rtl.css"
+              rel="stylesheet">
+
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+        <script async
+                src="https://www.googletagmanager.com/gtag/js?id=UA-133433427-1"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag() {
+                dataLayer.push(arguments);
+            }
+            gtag('js', new Date());
+            gtag('config', 'UA-133433427-1');
+        </script>
+        <script> 
+          
+        function checkEmail(form) { 
+        email = form.Email.value; 
+        email2 = form.Alternateemail.value; 
+          
+        if ( email  === email2) { 
+            alert ("\nEnter different email!") 
+            return false; 
+        } 
+        else{ 
+            return true; 
+            } 
+        } 
+        </script> 
+       
+
+    </head>
+
+    <body class="layout-default">
+
+        <div class="preloader"></div>
+
+        <!-- Header Layout -->
+        <div class="mdk-header-layout js-mdk-header-layout">
+
+            <!-- Header -->
+
+            <%- include('partials/header')%>
+
+            <!-- // END Header -->
+
+           
+           
+            <!-- Header Layout Content -->
+            <div class="mdk-header-layout__content">
+
+                <div class="mdk-drawer-layout js-mdk-drawer-layout"
+                     data-push
+                     data-responsive-width="992px">
+                    <div class="mdk-drawer-layout__content page">
+
+                        <div class="container-fluid page__heading-container">
+                            <div class="page__heading d-flex align-items-center">
+                                <div class="flex">
+                                   <h1 class="m-0">Detailed Project Report(DPR)</h1>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="container-fluid page__container">
+                               <div class="card card-form">
+                                    <div class="card">
+                                        
+                                        <div class="card-header card-header-tabs-basic nav"
+                                             >
+                                            <a href="/dpr/<%=data._id%>/1"
+                                               class="active"
+                                               
+                                               role="tab"
+                                               aria-controls="activity_all"
+                                               aria-selected="true">About Cluster</a>
+                                            <a href="/dpr/<%=data._id%>/2"
+                                              
+                                               
+                                               aria-selected="false">Info_Imp.Agency</a>
+                                            <a href="/dpr/<%=data._id%>/3"
+                                               
+                                               role="tab"
+                                               aria-selected="false">Info...SPV</a>
+                                            <a href="/dpr/<%=data._id%>/4"
+                                               
+                                               role="tab"
+                                               aria-selected="false">Info...Prod.Process</a>
+                                            <a href="/dpr/<%=data._id%>/5"
+                                               
+                                               role="tab"
+                                               aria-selected="false">Land Details</a>
+                                            <a href="/dpr/<%=data._id%>/6"
+                                               
+                                               role="tab"
+                                               aria-selected="false">Soft Intervention</a>
+                                            <a href="/dpr/<%=data._id%>/7"
+                                               
+                                               role="tab"
+                                               aria-selected="false">Hard Intervention</a>
+                                            <a href="/dpr/<%=data._id%>/8"
+                                               
+                                               role="tab"
+                                               aria-selected="false">Project Cost Details</a>
+                                            <a href="/dpr/<%=data._id%>/9"
+                                               
+                                               role="tab"
+                                               aria-selected="false">Info...Proj.Timeline</a>
+                                            <a href="/dpr/<%=data._id%>/10"
+                                               
+                                               role="tab"
+                                               aria-selected="false">ExpectedImpact</a>
+                                            <a href="/dpr/<%=data._id%>/11"
+                                               
+                                               role="tab"
+                                               aria-selected="false">TentativeBusiness Plan</a>
+                                            <a href="/dpr/<%=data._id%>/12"
+                                               
+                                               role="tab"
+                                               aria-selected="false">Info_Artisans</a>
+                                        </div>
+                                    </div>   
+                                  <div class="card-body">
+                                        <p><strong class="headings-color">Fill Basic Info</strong></p>
+                                  </div>
+                                  
+                                         
+                                          <div class="row no-gutters">
+                                             <div class="card-form__body card-body">
+                                                <form action="/dpr/<%=data._id%>/1" method="POST" onSubmit = "return checkEmail(this)">
+                                                    <div class="row">
+                                                        <div class="col">
+                                                          <label for="ClusterName">Cluster Name *</label>
+                                                          <input required value="" type="text" class="form-control" id="ClusterName" placeholder="Cluster Name" name="ClusterName" required>
+                                                        </div>
+                                                        <div class="col">
+                                                           <label for="select01">Cluster Type</label>
+                                                           <select id="select01"
+                                                             data-toggle="select"
+                                                              class="form-control"
+                                                              name="ClusterType">
+                                                           <option selected="">One</option>
+                                                           <option>Two </option>
+                                                           <option>Three</option>
+                                                           </select>
+                                                        </div>
+                                                   </div>
+                                                   <br>
+                                                   <div class="row">
+                                                       <div class="col">
+                                                           <label for="Location">Location of Cluster *</label>
+                                                           <input required value="" type="text" class="form-control" id="Location"  placeholder="Location of Cluster"  name="Location" required>
+                                                       </div>
+                                                       <div class="col">
+                                                           <label for="Postal">Postal Address *</label>
+                                                           <input required value="" type="text" class="form-control" id="Postal" placeholder="Postal Address" name="Postal" required>    
+                                                       </div>
+                                                   </div>
+                                                   <br>
+                                                   <div class="row">
+                                                       <div class="col">
+                                                           <label for="select01">State *</label>
+                                                           <select id="select01"
+                                                             data-toggle="select"
+                                                              class="form-control" name="State" required>
+                                                               <option selected>--select--</option>
+                                                               <option value="1">One</option>
+                                                               <option value="2">Two</option>
+                                                               <option value="3">Three</option>
+                                                             </select>
+                                                       </div>
+                                                       <div class="col">
+                                                           <label for="select01">District *</label>
+                                                           <select id="select01"
+                                                             data-toggle="select"
+                                                              class="form-control" name="District" required>
+                                                               <option selected>--select--</option>
+                                                               <option value="1">One</option>
+                                                               <option value="2">Two</option>
+                                                               <option value="3">Three</option>
+                                                             </select>
+                                                       </div>
+                                                   </div>
+                                                   <br>
+                                                   <div class="row">
+                                                       <div class="col">
+                                                           <label for="Pincode">Pincode *</label>
+                                                           <input required value="" type="text" class="form-control" id="Pincode" placeholder="111111" required pattern="[0-9]{6}" maxlength="6" name="Pincode">
+                                                       </div>
+                                                       <div class="col">
+                                                           <label for="Mobileno">Mobile no *</label>
+                                                           <input required value="" type="text" class="form-control" id="Mobileno" placeholder="Example:9999999999" required pattern="[0-9]{10}" maxlength="10" name="Mobileno">
+                                                       </div>
+                                                   </div>
+                                                   <br>
+                                                   <div class="row">
+                                                       <div class="col">
+                                                           <label for="Email">Email *</label>
+                                                           <input required value="" type="email" class="form-control" id="Email" placeholder="info@mail" name="Email" required>
+                                                       </div>
+                                                       <div class="col">
+                                                           <label for="Alternateemail">Alternate Email *</label>
+                                                           <input required value="" type="email" class="form-control" id="Alternateemail" placeholder="info@mail" name="Alternateemail" required>
+                                                       </div>
+                                                   </div>
+                                                   <br>
+                                                   <div class="row">
+                                                       <div class="col">
+                                                           <label for="Telephone">Telephone no </label>
+                                                           <input value="" type="tel" class="form-control" id="Telephone" placeholder="011-26713326" name="Telephone">
+                                                       </div>
+                                                       <div class="col">
+                                                           <label for="Faxno">Fax no. </label>
+                                                           <input value="" type="tel" class="form-control" id="Faxno" placeholder="Example:011-26713326" name="Faxno">
+                                                       </div>
+                                                   </div>
+                                                   <br>
+                                                   <div class="col-xs-3">
+                                                     <label for="Year">Year of Establishment of Cluster(In Year) </label>
+                                                     <input required value="" type="text" class="form-control" id="Year" placeholder="1985" pattern="[0-9]{4}" name="Year">
+                                                   </div>
+                                                   <br>
+                                                   <div class="row">
+                                                       <div class="col">
+                                                           <label for="Type">Type of Applicant Organization </label>
+                                                           <input required value="" type="text" class="form-control" id="Type" name="Type">
+                                                       </div>
+                                                       <div class="col">
+                                                           <label for="Key">Key Economic Activities in Region *</label>
+                                                           <input required value="" type="text" class="form-control" id="Key" placeholder="Key Economic Activities in Region" name="Key" required>
+                                                       </div>
+                                                   </div>
+                                                   <br>
+                                                   <div class="row">
+                                                       <div class="col">
+                                                           <label for="Experience">Experience in handling Cluster Development Programme</label>
+                                                           <input required value="" type="text" class="form-control" id="EXperience" placeholder="Experience in handling in years" name="Experience">
+                                                       </div>
+                                                       <div class="col">
+                                                           <label for="Potential">Potential No.Of Artisans *</label>
+                                                           <input required value="" type="text" class="form-control" id="Potential" placeholder="Potentials No.Of Artisans" pattern="[0-9]{.}" name="Potential" required>
+                                                       </div>
+                                                   </div>
+                                                   <br>
+                                                   <button class="btn btn-primary" type="submit">Save</button>
+                                                   <button class="btn btn-primary" type="reset">Reset</button>
+                                                   </form>
+                                            </div>
+                                          </div>
+                                       
+                                 
+                       
+                               </div>
+                          </div>       
+                        
+                    </div>
+
+
+
+
+
+
+                    <!-- // END drawer-layout__content -->
+
+                    <%- include('partials/sidebar') %>
+                </div>
+                <!-- // END drawer-layout -->
+
+            </div>
+            <!-- // END header-layout__content -->
+
+        </div>
+        <!-- // END header-layout -->
+
+        <!-- App Settings FAB -->
+        <div id="app-settings">
+            <app-settings layout-active="default"
+                          :layout-location="{
+      'default': 'blank.html',
+      'fixed': 'fixed-blank.html',
+      'fluid': 'fluid-blank.html',
+      'mini': 'mini-blank.html'
+    }"></app-settings>
+        </div>
+
+        <!-- jQuery -->
+        <script src="/assets/vendor/jquery.min.js"></script>
+
+        <!-- Bootstrap -->
+        <script src="/assets/vendor/popper.min.js"></script>
+        <script src="/assets/vendor/bootstrap.min.js"></script>
+
+        <!-- Perfect Scrollbar -->
+        <script src="/assets/vendor/perfect-scrollbar.min.js"></script>
+
+        <!-- DOM Factory -->
+        <script src="/assets/vendor/dom-factory.js"></script>
+
+        <!-- MDK -->
+        <script src="/assets/vendor/material-design-kit.js"></script>
+
+        <!-- App -->
+        <script src="/assets/js/toggle-check-all.js"></script>
+        <script src="/assets/js/check-selected-row.js"></script>
+        <script src="/assets/js/dropdown.js"></script>
+        <script src="/assets/js/sidebar-mini.js"></script>
+        <script src="/assets/js/app.js"></script>
+
+        <!-- App Settings (safe to remove) -->
+        <script src="/assets/js/app-settings.js"></script>
+
+    </body>
+
+</html>

@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html lang="en"
+      dir="ltr">
+
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible"
+              content="IE=edge">
+        <meta name="viewport"
+              content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <title>Blank</title>
+
+        <!-- Prevent the demo from appearing in search engines -->
+        <meta name="robots"
+              content="noindex">
+
+        <!-- Perfect Scrollbar -->
+        <link type="text/css"
+              href="/assets/vendor/perfect-scrollbar.css"
+              rel="stylesheet">
+
+        <!-- App CSS -->
+        <link type="text/css"
+              href="/assets/css/app.css"
+              rel="stylesheet">
+        <link type="text/css"
+              href="/assets/css/app.rtl.css"
+              rel="stylesheet">
+
+        <!-- Material Design Icons -->
+        <link type="text/css"
+              href="/assets/css/vendor-material-icons.css"
+              rel="stylesheet">
+        <link type="text/css"
+              href="/assets/css/vendor-material-icons.rtl.css"
+              rel="stylesheet">
+
+        <!-- Font Awesome FREE Icons -->
+        <link type="text/css"
+              href="/assets/css/vendor-fontawesome-free.css"
+              rel="stylesheet">
+        <link type="text/css"
+              href="/assets/css/vendor-fontawesome-free.rtl.css"
+              rel="stylesheet">
+
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+        <script async
+                src="https://www.googletagmanager.com/gtag/js?id=UA-133433427-1"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag() {
+                dataLayer.push(arguments);
+            }
+            gtag('js', new Date());
+            gtag('config', 'UA-133433427-1');
+        </script>
+        <script>
+            function Validate(file){
+                var filesize1 = file.Umafile1.size/1024/1024;
+                if(filesize1>5){
+                    alert('File size exceeds 5 Mb')
+                }
+                var filesize2 = file.ucrfile1.size/1024/1024;
+                if(filesize2>2){
+                    alert('File size exceeds 2 Mb')
+                }
+                var filesize3 = file.Panfile1.size/1024/1024;
+                if(filesize3>2){
+                    alert('File size exceeds 2 Mb')
+                }
+                var filesize4 = file.Aadharfile1.size/1024/1024;
+                if(filesize4>2){
+                    alert('File size exceeds 2 Mb')
+                }
+                
+                
+            }
+            function Validate2(file){
+                var filesize5 = file.fin1.size/1024/1024;
+                if(filesize5 >2){
+                    alert('File size exceeds 2 Mb')
+                }
+                var filesize6 = file.itr1.size/1024/1024;
+                if(filesize6>2){
+                    alert('File size exceeds 2 Mb')
+                }
+            }    
+        </script>
+
+    </head>
+
+    <body class="layout-default">
+
+        <div class="preloader"></div>
+
+        <!-- Header Layout -->
+        <div class="mdk-header-layout js-mdk-header-layout">
+
+            <!-- Header -->
+
+            <%- include('partials/header') %>
+
+            <!-- // END Header -->
+
+           
+           
+            <!-- Header Layout Content -->
+            <div class="mdk-header-layout__content">
+
+                <div class="mdk-drawer-layout js-mdk-drawer-layout"
+                     data-push
+                     data-responsive-width="992px">
+                    <div class="mdk-drawer-layout__content page">
+
+                        <div class="container-fluid page__heading-container">
+                            <div class="page__heading d-flex align-items-center">
+                                <div class="flex">
+                                   <h1 class="m-0">Detailed Project Report(DPR)</h1>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="container-fluid page__container">
+                               <div class="card card-form">
+                                   <div class="card">
+                                        
+                                        <div class="card-header card-header-tabs-basic nav"
+                                             role="tablist">
+                                            <a href="/dpr/<%=data._id%>/1"
+                                               
+                                               
+                                               role="tab"
+                                               aria-controls="activity_all"
+                                               aria-selected="true">About Cluster</a>
+                                            <a href="/dpr/<%=data._id%>/2"
+                                               class="active"
+                                               
+                                               role="tab"
+                                               aria-selected="false">Info_Imp.Agency</a>
+                                            <a href="/dpr/<%=data._id%>/3"
+                                               
+                                               role="tab"
+                                               aria-selected="false">Info...SPV</a>
+                                            <a href="/dpr/<%=data._id%>/4"
+                                               
+                                               role="tab"
+                                               aria-selected="false">Info...Prod.Process</a>
+                                            <a href="/dpr/<%=data._id%>/5"
+                                               
+                                               role="tab"
+                                               aria-selected="false">Land Details</a>
+                                            <a href="/dpr/<%=data._id%>/6"
+                                               
+                                               role="tab"
+                                               aria-selected="false">Soft Intervention</a>
+                                            <a href="/dpr/<%=data._id%>/7"
+                                               
+                                               role="tab"
+                                               aria-selected="false">Hard Intervention</a>
+                                            <a href="/dpr/<%=data._id%>/8"
+                                               
+                                               role="tab"
+                                               aria-selected="false">Project Cost Details</a>
+                                            <a href="/dpr/<%=data._id%>/9"
+                                               
+                                               role="tab"
+                                               aria-selected="false">Info...Proj.Timeline</a>
+                                            <a href="/dpr/<%=data._id%>/10"
+                                               
+                                               role="tab"
+                                               aria-selected="false">ExpectedImpact</a>
+                                            <a href="/dpr/<%=data._id%>/11"
+                                               
+                                               role="tab"
+                                               aria-selected="false">TentativeBusiness Plan</a>
+                                            <a href="/dpr/<%=data._id%>/12"
+                                               
+                                               role="tab"
+                                               aria-selected="false">Info_Artisans</a>
+                                        </div>
+                                    </div>
+                                  <div class="card-body">
+                                        <p><strong class="headings-color">Profile Of Implementing Agency</strong></p>
+                                  </div>
+                                  <div class="container-fluid page__container">
+                                      <div class="card card-form">
+                                         
+                                          <div class="row no-gutters">
+                                             <div class="card-form__body card-body">
+                                                <form action="/dpr/<%=data._id%>/2?form=1" method="POST" onsubmit=" return Validate(this)" role="form" enctype="multipart/form-data">
+                                                    <div class="row">
+                                                        <div class="col">
+                                                          <label for="Agencyname1">Implementing Agency Name</label>
+                                                          <input required value="" type="text" class="form-control" id="Agencyname1" placeholder="Soft Intervention Activity Name" name="Agencyname1">
+                                                        </div>
+                                                        <div class="col">
+                                                            <div class="col">
+                                                                <label for="AgencyType1 ">Implementing Agency Type</label>
+                                                                <input required value="" type="text" class="form-control" id="AgencyType1 " placeholder="Soft Intervention Activity Name" name="AgencyType1 ">
+                                                              </div>       
+                                                        </div>
+                                                   </div>
+                                                   <br>
+                                                   <div class="row">
+                                                       <div class="col">
+                                                           <label for="Pincode1">Pincode</label>
+                                                           <input required value="" type="text" class="form-control" id="Pincode1" pattern="[0-9]{6}" placeholder="111111"  name="Pincode1">
+                                                       </div>
+                                                       <div class="col">
+                                                        <label for="select01">State</label>
+                                                           <select id="select01"
+                                                             data-toggle="select"
+                                                              class="form-control" name="State" required>
+                                                               <option selected>--select--</option>
+                                                               <option value="1">One</option>
+                                                               <option value="2">Two</option>
+                                                               <option value="3">Three</option>
+                                                             </select>
+                                                       </div>
+                                                   </div>
+                                                   <br>
+                                                   <div class="row">
+                                                       <div class="col">
+                                                        <label for="select01">District</label>
+                                                           <select id="select01"
+                                                             data-toggle="select"
+                                                              class="form-control" name="District" required>
+                                                               <option selected>--select--</option>
+                                                               <option value="1">One</option>
+                                                               <option value="2">Two</option>
+                                                               <option value="3">Three</option>
+                                                             </select>
+                                                       </div>
+                                                       <div class="col">
+                                                        <label for="Email1">Email</label>
+                                                        <input required value="" type="text" class="form-control" id="Email1" placeholder="info@mail" name="Email1">
+                                                       </div>
+                                                   </div>
+                                                   <br>
+                                                   <div class="row">
+                                                       <div class="col">
+                                                           <label for="Cpname1">Contact Person Name</label>
+                                                           <input required value="" type="text" class="form-control" id="Cpname1" placeholder="Enter Contact Person Name" name="Cpname1">
+                                                       </div>
+                                                       <div class="col">
+                                                           <label for="Mobileno1">Mobile no</label>
+                                                           <input required value="" type="text" class="form-control" id="Mobileno1" placeholder="Example:9999999999" pattern="[0-9]{10}" name="Mobileno1">
+                                                       </div>
+                                                   </div>
+                                                   <br>
+                                                   <div class="row">
+                                                       <div class="col">
+                                                           <label for="Contactno1">Contact No.</label>
+                                                           <input required value="" type="text" class="form-control" id="Contactno1" placeholder="011-26713326" name="Contactno1">
+                                                       </div>
+                                                       <div class="col">
+                                                           <label for="select01">Organization Type</label>
+                                                           <select id="select01"
+                                                             data-toggle="select"
+                                                              class="form-control" name="orgtype" required>
+                                                               <option selected>--select--</option>
+                                                               <option value="1">One</option>
+                                                               <option value="2">Two</option>
+                                                               <option value="3">Three</option>
+                                                             </select>
+                                                       </div>
+                                                   </div>
+                                                   <br>
+                                                   <div class="row">
+                                                       <div class="col">
+                                                           <label for="Regno1">Registration No.</label>
+                                                           <input required value="" type="text" class="form-control" id="Regno1" placeholder="Enter Registration No." name="Regno1">
+                                                       </div>
+                                                       <div class="col">
+                                                           <label for="Valdate1">Validity Date</label>
+                                                           <input required value="" type="date" class="form-control" id="Valdate1" placeholder="Example:dd/mm/yyyy" name="Valdate1">
+                                                       </div>
+                                                   </div>
+                                                   <br>
+                                                   <div class="row">
+                                                   <div class="col">
+                                                     <label for="Umafile1">Upload Memorandum of Associaton *</label>
+                                                     <input required value="" type="file" class="form-control-file" id="Umafile1" name="Umafile1">
+                                                     <div style="color:green">[Only pdf files]File size should not exceed 5mb</div>
+                                                   </div>
+                                                   <div class="col">
+                                                       <label for="ucrfile1">Upload Certificate of Registration Under Society/Registration Act/Public Charitable Act *</label>
+                                                       <input required value="" type="file" class="form-control-file" id="ucrfile1" name="ucrfile1">
+                                                       <div style="color:green">[Only pdf files]File size should not exceed 2mb</div>
+                                                   </div>
+                                                </div>
+                                                   <br>
+                                                   <div class="row">
+                                                       <div class="col">
+                                                           <label for="Panfile1">Upload Pan of Organization *</label>
+                                                           <input required value="" type="file" class="form-control-file" id="Panfile1" name="Panfile1">
+                                                           <div style="color:green">[Only pdf files]File size should not exceed 2mb</div>
+                                                       </div>
+                                                       <div class="col">
+                                                           <label for="Aadharfile1">Upload Aadhar Number of Governing /Managing body *</label>
+                                                           <input required value="" type="file" class="form-control-file" id="Aadharfile1" name="Aadharfile1">
+                                                           <div style="color:green">[Only pdf files]File size should not exceed 2mb</div>
+                                                       </div>
+                                                   </div>
+                                                   <br>
+                                                   <div class="row">
+                                                       <div class="col">
+                                                           <label for="Name1">Name of Account Holder</label>
+                                                           <input required value="" type="text" class="form-control" id="Name1" placeholder="Account Holder Name" name="Name1">
+                                                       </div>
+                                                       <div class="col">
+                                                           <label for="Accountno1">Bank Account Number</label>
+                                                           <input required value="" type="text" class="form-control" id="Accountno1" placeholder="Account Number" name="Accountno1">
+                                                       </div>
+                                                   </div>
+                                                   <br>
+                                                   <div class="row">
+                                                       <div class="col">
+                                                           <label for="Bname1">Bank Name</label>
+                                                           <input required value="" type="text" class="form-control" id="Bname1" placeholder="Bank Name" name="Bname1">
+                                                       </div>
+                                                       <div class="col">
+                                                           <label for="Bcity1">Branch City</label>
+                                                           <input required value="" type="text" class="form-control" id="Bcity1" placeholder="Branch City" name="Bcity1">
+                                                       </div>
+                                                   </div>
+                                                   <br>
+                                                   
+                                                           <label for="Ifsc1">IFSC Code</label>
+                                                           <input required value="" type="text" class="form-control" id="Ifsc1" placeholder="Bank IFSC Code" name="Ifsc1">
+                                                    
+                                                   <br>
+                                                   <button class="btn btn-primary" type="submit">Save</button>
+                                                   <button class="btn btn-primary" type="reset">Reset</button>
+                                                   </form>
+                                                   <br>
+                                                 
+                                                   <div class="card-body">
+                                                               <p><strong class="headings-color">Financial Details of IA (Last 3 years)</strong></p>
+                                                   </div>
+                                                   <form action="/dpr/<%=data._id%>/2?form=2" method="POST" onsubmit=" return Validate2(this)" enctype="multipart/form-data">
+                                                   <div class="row">
+                                                       <div class="col">
+                                                        <label for="select01">Select Year</label>
+                                                           <select id="select01"
+                                                             data-toggle="select"
+                                                              class="form-control" name="year1" required>
+                                                               <option selected>--select--</option>
+                                                               <option value="1">One</option>
+                                                               <option value="2">Two</option>
+                                                               <option value="3">Three</option>
+                                                             </select>
+
+                                                       </div>
+                                                       <div class="col">
+                                                        <label for="fin1">Upload Financial Report</label>
+                                                        <input required value="" type="file" class="form-control-file"  id="fin1" name="fin1">
+                                                        <div style="color:green">[Only pdf files]File size should not exceed 2mb</div>
+                                                       </div>
+                                                       <div class="col">
+                                                        <label for="itr1">Upload ITR</label>
+                                                        <input required value="" type="file" class="form-control-file" id="itr1" name="itr1">
+                                                        <div style="color:green">[Only pdf files]File size should not exceed 2mb</div>
+                                                       </div>
+                                                       <div class="col">
+                                                        <label for="act1">Activity in Brief</label>
+                                                        <input required value="" type="text" 
+                                                        class="form-control" placeholder="Max. 200 Words" maxlength="200" name="act1">
+                                                       </div>
+                                                   </div>
+                                                   <br>
+                                                   <button class="btn btn-primary" type="submit">Add</button>
+                                                   </form>
+                                            </div>
+                                          </div>
+                                       </div>
+                                   </div>
+                                 
+                       
+                               </div>
+                          </div>       
+                        
+                    </div>
+
+
+
+
+
+
+                    <!-- // END drawer-layout__content -->
+
+                    <%- include('partials/sidebar') %>
+                </div>
+                <!-- // END drawer-layout -->
+
+            </div>
+            <!-- // END header-layout__content -->
+
+        </div>
+        <!-- // END header-layout -->
+
+        <!-- App Settings FAB -->
+        <div id="app-settings">
+            <app-settings layout-active="default"
+                          :layout-location="{
+      'default': 'blank.html',
+      'fixed': 'fixed-blank.html',
+      'fluid': 'fluid-blank.html',
+      'mini': 'mini-blank.html'
+    }"></app-settings>
+        </div>
+
+        <!-- jQuery -->
+        <script src="/assets/vendor/jquery.min.js"></script>
+
+        <!-- Bootstrap -->
+        <script src="/assets/vendor/popper.min.js"></script>
+        <script src="/assets/vendor/bootstrap.min.js"></script>
+
+        <!-- Perfect Scrollbar -->
+        <script src="/assets/vendor/perfect-scrollbar.min.js"></script>
+
+        <!-- DOM Factory -->
+        <script src="/assets/vendor/dom-factory.js"></script>
+
+        <!-- MDK -->
+        <script src="/assets/vendor/material-design-kit.js"></script>
+
+        <!-- App -->
+        <script src="/assets/js/toggle-check-all.js"></script>
+        <script src="/assets/js/check-selected-row.js"></script>
+        <script src="/assets/js/dropdown.js"></script>
+        <script src="/assets/js/sidebar-mini.js"></script>
+        <script src="/assets/js/app.js"></script>
+
+        <!-- App Settings (safe to remove) -->
+        <script src="/assets/js/app-settings.js"></script>
+
+    </body>
+
+</html>

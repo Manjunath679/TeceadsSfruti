@@ -1,0 +1,84 @@
+<div class="mdk-drawer  js-mdk-drawer"
+                         id="default-drawer"
+                         data-align="start">
+                        <div class="mdk-drawer__content">
+                            <div class="sidebar sidebar-light sidebar-left sidebar-p-t"
+                                 data-perfect-scrollbar>
+                                 <div class="d-flex align-items-center sidebar-p-a border-bottom sidebar-account">
+                                    <a href="profile.html"
+                                       class="flex d-flex align-items-center text-underline-0 text-body">
+                                        <span class="avatar avatar-sm mr-2">
+                                            <img src="/assets/images/avatar/demi.png"
+                                                 alt="avatar"
+                                                 class="avatar-img rounded-circle">
+                                        </span>
+                                        <span class="flex d-flex flex-column">
+                                            <strong><%=user.name%></strong>
+                                        </span>
+                                    </a>
+                                </div>
+                                <ul class="sidebar-menu">
+                                    <li class="sidebar-menu-item">
+                                        <a class="sidebar-menu-button"
+                                           data-toggle="collapse"
+                                           href="#dashboards_menu">
+                                            <i class="sidebar-menu-icon sidebar-menu-icon--left material-icons">dvr</i>
+                                            <span class="sidebar-menu-text">Dashboards</span>
+                                            <span class="ml-auto sidebar-menu-toggle-icon"></span>
+                                        </a>
+                                        <ul class="sidebar-submenu collapse"
+                                            id="dashboards_menu">
+                                            <li class="sidebar-menu-item">
+                                                <a class="sidebar-menu-button"
+                                                   href="/home">
+                                                    <span class="sidebar-menu-text">Home</span>
+                                                </a>
+                                            </li>
+                                            <li class="sidebar-menu-item">
+                                                <a class="sidebar-menu-button"
+                                                   href="/conceptnote">
+                                                    <span class="sidebar-menu-text">Concept Note</span>
+                                                </a>
+                                            </li>
+                                            <%if(user.usertype == 'TA'){%>
+                                            <li class="sidebar-menu-item">
+                                                <a class="sidebar-menu-button"
+                                                   href="/clusteroverview">
+                                                    <span class="sidebar-menu-text">Cluster Overview</span>
+                                                </a>
+                                            </li>
+                                            <%}%>
+                                            <%if(user.conceptnote.approved == true || user.usertype == 'TA'){%>
+                                            <li class="sidebar-menu-item">
+                                                <a class="sidebar-menu-button"
+                                                   href="/dpr">
+                                                    <span class="sidebar-menu-text">Detailed Project Report</span>
+                                                </a>
+                                            </li>
+                                            <%}%>
+                                            <li class="sidebar-menu-item">
+                                                <a class="sidebar-menu-button"
+                                                   href="/changepassword">
+                                                    <span class="sidebar-menu-text">Change Password</span>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <%if(user.usertype == 'TA'){%>
+                                        <li class="sidebar-menu-item">
+                                            <a class="sidebar-menu-button"
+                                               href="/signup">
+                                                <span class="sidebar-menu-text">Signup</span>
+                                            </a>
+                                    </li>
+                                        <%}%>
+                                    <li class="sidebar-menu-item">
+                                            <a class="sidebar-menu-button"
+                                               href="/logout">
+                                                <span class="sidebar-menu-text">Logout</span>
+                                            </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>

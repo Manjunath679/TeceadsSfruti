@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="en"
+      dir="ltr">
+
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible"
+              content="IE=edge">
+        <meta name="viewport"
+              content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <title>Blank</title>
+
+        <!-- Prevent the demo from appearing in search engines -->
+        <meta name="robots"
+              content="noindex">
+
+        <!-- Perfect Scrollbar -->
+        <link type="text/css"
+              href="/assets/vendor/perfect-scrollbar.css"
+              rel="stylesheet">
+
+        <!-- App CSS -->
+        <link type="text/css"
+              href="/assets/css/app.css"
+              rel="stylesheet">
+        <link type="text/css"
+              href="/assets/css/app.rtl.css"
+              rel="stylesheet">
+
+        <!-- Material Design Icons -->
+        <link type="text/css"
+              href="/assets/css/vendor-material-icons.css"
+              rel="stylesheet">
+        <link type="text/css"
+              href="/assets/css/vendor-material-icons.rtl.css"
+              rel="stylesheet">
+
+        <!-- Font Awesome FREE Icons -->
+        <link type="text/css"
+              href="/assets/css/vendor-fontawesome-free.css"
+              rel="stylesheet">
+        <link type="text/css"
+              href="/assets/css/vendor-fontawesome-free.rtl.css"
+              rel="stylesheet">
+
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+        <script async
+                src="https://www.googletagmanager.com/gtag/js?id=UA-133433427-1"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+
+            function gtag() {
+                dataLayer.push(arguments);
+            }
+            gtag('js', new Date());
+            gtag('config', 'UA-133433427-1');
+        </script>
+
+    </head>
+
+    <body class="layout-default">
+
+        <div class="preloader"></div>
+
+        <!-- Header Layout -->
+        <div class="mdk-header-layout js-mdk-header-layout">
+
+            <!-- Header -->
+
+            <%- include('partials/header') %>
+
+            <!-- // END Header -->
+
+           
+           
+            <!-- Header Layout Content -->
+            <div class="mdk-header-layout__content">
+
+                <div class="mdk-drawer-layout js-mdk-drawer-layout"
+                     data-push
+                     data-responsive-width="992px">
+                    <div class="mdk-drawer-layout__content page">
+
+                        <div class="container-fluid page__heading-container">
+                            <div class="page__heading">
+                                
+
+                                <h1 class="m-0">Detailed Project Report(DPR)</h1>
+                            </div>
+                        </div>
+
+                        <div class="container-fluid page__container">
+                            <div class="card">
+                                        
+                                        <div class="card-header card-header-tabs-basic nav"
+                                             role="tablist">
+                                            <a href="/dpr/<%=data._id%>/1"
+                                           
+                                               
+                                               role="tab"
+                                               aria-controls="activity_all"
+                                               aria-selected="true">About Cluster</a>
+                                            <a href="/dpr/<%=data._id%>/2"
+                                               
+                                               role="tab"
+                                               aria-selected="false">Info_Imp.Agency</a>
+                                            <a href="/dpr/<%=data._id%>/3"
+                                         
+                                               
+                                               role="tab"
+                                               aria-selected="false">Info...SPV</a>
+                                            <a href="/dpr/<%=data._id%>/4"
+                                               
+                                               role="tab"
+                                               aria-selected="false">Info...Prod.Process</a>
+                                            <a href="/dpr/<%=data._id%>/5"
+                                               
+                                               role="tab"
+                                               aria-selected="false">Land Details</a>
+                                            <a href="/dpr/<%=data._id%>/6"
+                                               
+                                               role="tab"
+                                               aria-selected="false">Soft Intervention</a>
+                                             
+                                            <a href="/dpr/<%=data._id%>/7"
+                                               
+                                               role="tab"
+                                               aria-selected="false">Hard Intervention</a>
+                                            <a href="/dpr/<%=data._id%>/8"
+                                               
+                                               role="tab"
+                                               aria-selected="false">Project Cost Details</a>
+                                            <a href="/dpr/<%=data._id%>/9"
+                                               
+                                               role="tab"
+                                               class="active"
+                                               aria-selected="false">Info...Proj.Timeline</a>
+                                            <a href="/dpr/<%=data._id%>/10"
+                                               
+                                               role="tab"
+                                               aria-selected="false">ExpectedImpact</a>
+                                            <a href="/dpr/<%=data._id%>/11"
+                                               
+                                               role="tab"
+                                               aria-selected="false">TentativeBusiness Plan</a>
+                                            <a href="/dpr/<%=data._id%>/12"
+                                               
+                                               role="tab"
+                                               aria-selected="false">Info_Artisans</a>
+                                        </div>
+                                    </div>
+                            <div class="card card-form">
+                               
+                                    <div class="card-body">
+                                        <p><strong class="headings-color">Project Timeline</strong></p>
+                                    </div>
+                                    <div class="row no-gutters">
+                                             <div class="card-form__body card-body">
+                                             <form action="/dpr/<%=data._id%>/9" method="POST">
+                                                  
+                                                  <div class="form-row">
+                                                     <div class="col  mb-3">
+                                                        <label for="validationSample01"><strong class="headings-color">Activity</strong></label>
+                                                        <input required value="" type="text"
+                                                               class="form-control"
+                                                               id="validationSample01"
+                                                               placeholder="Max 200 words"
+                                                               name="Activity"
+                                                               required="true">
+                                                      </div>
+                                                   </div>
+                                                   
+                                                   <div class="form-row">
+                                                     <div class="col col-md-1  mb-3">
+                                                        <label for="validationSample01"><strong class="headings-color">Q1</strong></label>
+                                                        <input required value="" type="text"
+                                                               class="form-control"
+                                                               id="validationSample01"
+                                                               placeholder=""
+                                                               name="Q1"
+                                                               required="true">
+                                                      </div>
+                                                      <div class="col col-md-1  mb-3">
+                                                        <label for="validationSample01"><strong class="headings-color">Q2</strong></label>
+                                                        <input required value="" type="text"
+                                                               class="form-control"
+                                                               id="validationSample01"
+                                                               placeholder=""
+                                                                name="Q2"
+                                                               required="true">
+                                                      </div>
+                                                      <div class="col col-md-1  mb-3">
+                                                        <label for="validationSample01"><strong class="headings-color">Q3</strong></label>
+                                                        <input required value="" type="text"
+                                                               class="form-control"
+                                                               id="validationSample01"
+                                                               placeholder=""
+                                                             name="Q3"
+                                                               required="true">
+                                                      </div>
+                                                      <div class="col col-md-1  mb-3">
+                                                        <label for="validationSample01"><strong class="headings-color">Q4</strong></label>
+                                                        <input required value="" type="text"
+                                                               class="form-control"
+                                                               id="validationSample01"
+                                                               placeholder=""
+                                                             name="Q4"
+                                                               required="true">
+                                                      </div>
+                                                      <div class="col col-md-1  mb-3">
+                                                        <label for="validationSample01"><strong class="headings-color">Q5</strong></label>
+                                                        <input required value="" type="text"
+                                                               class="form-control"
+                                                               id="validationSample01"
+                                                               placeholder=""
+                                                             name="Q5"
+                                                               required="true">
+                                                      </div>
+                                                      <div class="col col-md-1  mb-3">
+                                                        <label for="validationSample01"><strong class="headings-color">Q6</strong></label>
+                                                        <input required value="" type="text"
+                                                               class="form-control"
+                                                               id="validationSample01"
+                                                               placeholder=""
+                                                             name="Q6"
+                                                               required="true">
+                                                      </div>
+                                                      <div class="col col-md-1  mb-3">
+                                                        <label for="validationSample01"><strong class="headings-color">Q7</strong></label>
+                                                        <input required value="" type="text"
+                                                               class="form-control"
+                                                               id="validationSample01"
+                                                               placeholder=""
+                                                             name="Q7"
+                                                               required="true">
+                                                      </div>
+                                                      <div class="col col-md-1  mb-3">
+                                                        <label for="validationSample01"><strong class="headings-color">Q8</strong></label>
+                                                        <input required value="" type="text"
+                                                               class="form-control"
+                                                               id="validationSample01"
+                                                               placeholder=""
+                                                             name="Q8"
+                                                               required="true">
+                                                      </div>
+                                                      <div class="col col-md-1  mb-3">
+                                                        <label for="validationSample01"><strong class="headings-color">Q9</strong></label>
+                                                        <input required value="" type="text"
+                                                               class="form-control"
+                                                               id="validationSample01"
+                                                               placeholder=""
+                                                             name="Q9"
+                                                               required="true">
+                                                      </div>
+                                                      <div class="col col-md-1  mb-3">
+                                                        <label for="validationSample01"><strong class="headings-color">Q10</strong></label>
+                                                        <input required value="" type="text"
+                                                               class="form-control"
+                                                               id="validationSample01"
+                                                               placeholder=""
+                                                             name="Q10"
+                                                               required="true">
+                                                      </div>
+                                                      <div class="col col-md-1  mb-3">
+                                                        <label for="validationSample01"><strong class="headings-color">Q11</strong></label>
+                                                        <input required value="" type="text"
+                                                               class="form-control"
+                                                               id="validationSample01"
+                                                               placeholder=""
+                                                             name="Q11"
+                                                               required="true">
+                                                      </div>
+                                                      <div class="col col-md-1  mb-3">
+                                                        <label for="validationSample01"><strong class="headings-color">Q12</strong></label>
+                                                        <input required value="" type="text"
+                                                               class="form-control"
+                                                               id="validationSample01"
+                                                               placeholder=""
+                                                             name="Q12"
+                                                               required="true">
+                                                      </div>
+                                                   </div>
+                                                   <div class="form-row">
+                                                     <div class="col  mb-3">
+                                                        <p><strong class="headings-color">Note: Please enter only "Y" or "N" in quater boxes for the Project Time Line</strong></p>
+                                                      </div>
+                                                   </div>
+                                                  
+                                                  
+                                                  
+                                                  <button type="submit"
+                                                    class="btn btn-primary">Add</button>
+                                                   
+                                              </form>
+                                            </div>
+                                          </div>
+                                   
+                                   
+                               
+                               
+                               
+                              
+                          </div>       
+                        
+                        </div>
+                    </div>
+
+
+                    
+
+
+
+                    <!-- // END drawer-layout__content -->
+
+                    <%- include('partials/sidebar') %>
+                </div>
+                <!-- // END drawer-layout -->
+
+            </div>
+            <!-- // END header-layout__content -->
+
+        </div>
+        <!-- // END header-layout -->
+
+        <!-- App Settings FAB -->
+        <div id="app-settings">
+            <app-settings layout-active="default"
+                          :layout-location="{
+      'default': 'blank.html',
+      'fixed': 'fixed-blank.html',
+      'fluid': 'fluid-blank.html',
+      'mini': 'mini-blank.html'
+    }"></app-settings>
+        </div>
+
+        <!-- jQuery -->
+        <script src="/assets/vendor/jquery.min.js"></script>
+
+        <!-- Bootstrap -->
+        <script src="/assets/vendor/popper.min.js"></script>
+        <script src="/assets/vendor/bootstrap.min.js"></script>
+
+        <!-- Perfect Scrollbar -->
+        <script src="/assets/vendor/perfect-scrollbar.min.js"></script>
+
+        <!-- DOM Factory -->
+        <script src="/assets/vendor/dom-factory.js"></script>
+
+        <!-- MDK -->
+        <script src="/assets/vendor/material-design-kit.js"></script>
+
+        <!-- App -->
+        <script src="/assets/js/toggle-check-all.js"></script>
+        <script src="/assets/js/check-selected-row.js"></script>
+        <script src="/assets/js/dropdown.js"></script>
+        <script src="/assets/js/sidebar-mini.js"></script>
+        <script src="/assets/js/app.js"></script>
+
+        <!-- App Settings (safe to remove) -->
+        <script src="/assets/js/app-settings.js"></script>
+
+    </body>
+
+</html>
